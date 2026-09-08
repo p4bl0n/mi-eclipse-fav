@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- 👇 AQUÍ CAMBIAS EL TÍTULO DE LA PESTAÑA DEL NAVEGADOR -->
+  <title>Para tú, con amor: pablon</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Archivo de música -->
+  <audio id="bgMusic" preload="auto">
+    <source src="cancion.mpeg" type="audio/mpeg" />
+  </audio>
+
+  <!-- Cielo estelar y contenedor de estrellas fugaces -->
+  <div class="sky-background" id="sky"></div>
+  <div class="shooting-stars-box" id="shootingStarsBox"></div>
+
+  <main class="scene">
+    
+    <!-- Texto sutil antes de presionar el botón -->
+    <div class="header-hint" id="headerHint">
+      <p class="subtitle">boton de eclipse</p>
+    </div>
+
+    <!-- Escenario del eclipse -->
+    <div class="orbit-stage" id="orbitStage">
+      <div class="solar-corona"></div>
+      <div class="sun"></div>
+      <div class="moon" id="moon">
+        <div class="blood-glow"></div>
+        <div class="moon-crater c1"></div>
+        <div class="moon-crater c2"></div>
+        <div class="moon-crater c3"></div>
+      </div>
+    </div>
+
+    <!-- Botón para iniciar la experiencia -->
+    <div class="control-panel">
+      <button class="action-btn" id="startBtn">
+        <span class="btn-text">iniciar sorpresa :)</span>
+      </button>
+    </div>
+
+    <!-- Tarjeta de amor con foto ampliada y máquina de escribir -->
+    <div class="love-card" id="loveCard">
+      <div class="photo-wrapper">
+        <img src="foto.jpeg" alt="nosotros<3" class="couple-photo" id="couplePhoto" />
+      </div>
+      
+      <div class="message-content">
+        <!-- Título de la carta -->
+        <h2 class="title" id="cardTitle"></h2>
+        
+        <!-- Aquí se escribe tu mensaje letra por letra -->
+        <p class="dedication">
+          <span id="typewriterText"></span>
+          <span class="type-cursor" id="cursor">|</span>
+        </p>
+        
+        <!-- Firma / Cierre final -->
+        <p class="closing" id="cardClosing"></p>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
